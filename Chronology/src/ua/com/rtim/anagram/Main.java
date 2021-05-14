@@ -1,4 +1,4 @@
-package ua.com.rtim.chronology;
+package ua.com.rtim.anagram;
 
 import java.util.Scanner;
 
