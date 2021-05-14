@@ -3,19 +3,16 @@ package ua.com.rtim.anagram;
 public class Anagram {
 
 	public String createAnagram(String text) {
-
 		String anagram = "";
 		String[] words = text.split(" ");
 		for (String word : words) {
 			final String space = " ";
 			anagram += reverseWord(word) + space;
 		}
-
 		return anagram;
 	}
 
 	private String reverseWord(String word) {
-
 		char[] chars = word.toCharArray();
 		int leftIndex = 0;
 		int rightIndex = chars.length - 1;
@@ -38,7 +35,6 @@ public class Anagram {
 				rightIndex--;
 			}
 		}
-
 		return String.valueOf(chars);
 	}
 
