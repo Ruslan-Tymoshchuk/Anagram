@@ -7,7 +7,7 @@ public class Anagram {
 		String anagram = "";
 		String[] words = text.split(" ");
 		for (String word : words) {
-			String space = " ";
+			final String space = " ";
 			anagram += reverseWord(word) + space;
 		}
 
