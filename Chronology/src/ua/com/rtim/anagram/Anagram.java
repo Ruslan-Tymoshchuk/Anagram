@@ -1,13 +1,13 @@
 package ua.com.rtim.anagram;
 
 public class Anagram {
+	public final String TEXT_DELIMETER = "";
 
 	public String createAnagram(String text) {
 		StringBuilder anagram = new StringBuilder();
-		final String space = " ";
-		String[] words = text.split(space);
+		String[] words = text.split(TEXT_DELIMETER);
 		for (String word : words) {
-			anagram.append(reverseWord(word)).append(space);
+			anagram.append(reverseWord(word));
 		}
 		return anagram.toString();
 	}

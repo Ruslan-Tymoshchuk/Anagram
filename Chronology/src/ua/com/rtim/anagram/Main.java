@@ -11,5 +11,4 @@ public class Main {
 		Anagram anagram = new Anagram();
 		System.out.println("You'll get: " + anagram.createAnagram(text));
 	}
-
 }
