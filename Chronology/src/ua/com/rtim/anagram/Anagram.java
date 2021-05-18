@@ -1,15 +1,17 @@
 package ua.com.rtim.anagram;
 
 public class Anagram {
-	public final String TEXT_DELIMETER = "";
+
+	public static final String TEXT_DELIMETER = " ";
 
 	public String createAnagram(String text) {
-		StringBuilder anagram = new StringBuilder();
 		String[] words = text.split(TEXT_DELIMETER);
+		int i = 0;
 		for (String word : words) {
-			anagram.append(reverseWord(word));
+			words[i] = new StringBuilder(reverseWord(word)).toString();
+			i++;
 		}
-		return anagram.toString();
+		return String.join(TEXT_DELIMETER, words);
 	}
 
 	private String reverseWord(String word) {
