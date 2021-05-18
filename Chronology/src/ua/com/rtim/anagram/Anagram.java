@@ -28,7 +28,6 @@ public class Anagram {
 				leftIndex++;
 				rightIndex--;
 			}
-
 		}
 		return String.valueOf(chars);
 	}
