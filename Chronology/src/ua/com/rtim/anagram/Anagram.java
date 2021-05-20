@@ -5,13 +5,14 @@ public class Anagram {
 	public static final String TEXT_DELIMETER = " ";
 
 	public String createAnagram(String text) {
+		StringBuilder anagram = new StringBuilder();
 		String[] words = text.split(TEXT_DELIMETER);
-		int i = 0;
 		for (String word : words) {
-			words[i] = new StringBuilder(reverseWord(word)).toString();
-			i++;
+			if (anagram.length() > 0)
+				anagram.append(TEXT_DELIMETER);
+			anagram.append(reverseWord(word));
 		}
-		return String.join(TEXT_DELIMETER, words);
+		return anagram.toString();
 	}
 
 	private String reverseWord(String word) {
