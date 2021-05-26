@@ -7,12 +7,11 @@ import org.junit.jupiter.api.Test;
 
 class AnagramTest {
 
-	Anagram anagram = new Anagram();
+	private Anagram anagram = new Anagram();
 
 	@Test
 	void givenNull_whenCreateAnagram_thenException() {
-		Throwable exception = assertThrows(NullPointerException.class, () -> anagram.createAnagram(null));
-		assertEquals(null, exception.getMessage());
+		assertThrows(NullPointerException.class, () -> anagram.createAnagram(null));
 	}
 
 	@Test
@@ -31,7 +30,7 @@ class AnagramTest {
 	}
 
 	@Test
-	void givenNonLetterWord_whenCreateAnagram_thenNonLetterWord() {
+	void givenNonLetterWord_whenCreateAnagram_thenSameWord() {
 		assertEquals("!1230!", anagram.createAnagram("!1230!"));
 	}
 
@@ -46,7 +45,7 @@ class AnagramTest {
 	}
 
 	@Test
-	void givenNonLetterText_whenCreateAnagram_thenNonLetterText() {
+	void givenNonLetterText_whenCreateAnagram_thenSameText() {
 		assertEquals("5454 1!234! 7887 3?4!5", anagram.createAnagram("5454 1!234! 7887 3?4!5"));
 	}
 }
