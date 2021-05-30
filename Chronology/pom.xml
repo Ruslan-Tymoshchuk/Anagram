@@ -1,13 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Chronology</groupId>
-  <artifactId>ua.com.rtim.anagram</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <groupId>ua.com.rtim.anagram</groupId>
+  <artifactId>anagram</artifactId>
+  <version>1.0.1</version>
   <name>Reverse program</name>
   <description>This program to reverse some text</description>
   <build>
-    <sourceDirectory>src</sourceDirectory>
-    <testSourceDirectory>test</testSourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -26,16 +24,9 @@
   </build>
   <dependencies>
   	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<version>4.13</version>
-  		<scope>test</scope>
-  	</dependency>
-  	<dependency>
   		<groupId>org.junit.jupiter</groupId>
   		<artifactId>junit-jupiter</artifactId>
   		<version>5.6.0</version>
-  		<type>module</type>
   		<scope>test</scope>
   	</dependency>
   </dependencies>
